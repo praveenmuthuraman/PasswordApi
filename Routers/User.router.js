@@ -74,7 +74,7 @@ router.post("/reset-password", async (req, res) => {
     from: "praveenmuthuraman4756@gmail.com",
     to: user.email,
     subject: "Password Reset link",
-    text: `https://passwordapi.onrender.com/reset-password/${token}`,
+    text: `http://localhost:5173/reset-password/${token}`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
